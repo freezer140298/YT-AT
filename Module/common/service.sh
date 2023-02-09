@@ -1,6 +1,3 @@
-while [ "$(getprop sys.boot_completed)" != "1" ]; do sleep 1; done
-sleep 1
-
 RD="$RANDOM"
 while true; do
 echo > /sdcard/$RD

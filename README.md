@@ -1,8 +1,6 @@
 # YT-AT [![YT-AT](https://github.com/kakathic/YT-AT/actions/workflows/build.yml/badge.svg)](https://github.com/kakathic/YT-AT/actions/workflows/build.yml)
 
-- YouTube mod tool automatically
-
-- [![Zzz Auto Build REvanced](https://github.com/kakathic/YT-AT/actions/workflows/AT.yml/badge.svg)](https://github.com/kakathic/YT-AT/actions/workflows/AT.yml)
+- YouTube mod tool auto, and auto update.
 
 **Use Revanced cli**
 ---
@@ -19,17 +17,12 @@
 
    > [Apkmirror](https://www.apkmirror.com/apk/google-inc/youtube/)
 
-**Module Magisk**
+**Build YouTube**
 ---
 
-- Download the YouTube magisk file and flash
+- You can build your own version with models suitable for your machine. 
 
-- To update without rebooting try the following command:
-
-  > <sup>curl -# -L http://Link-Magisk-Youtube.zip -o YouTube.zip && magisk --install-module YouTube.zip && cp -rf /data/adb/modules_update/YouTube /data/adb/modules && rm -fr /data/adb/modules_update/YouTube /data/adb/modules/YouTube/update YouTube.zip</sup>
-
-
-- Replace `Link-Magisk-Youtube.zip` with your link.
+   > [Instructions](./Auto.md)
 
 **Microg**
 ---
@@ -53,6 +46,15 @@
 
    > [SnapTube](https://www.snaptubeapp.com)
 
+**Language Contribution**
+---
+
+- I don't know many languages, you can contribute languages ​​at the link below.
+
+   > [Language](./Lang)
+
+- Or submit the language file to the issue.
+
 **Support**
 ---
 
@@ -62,29 +64,7 @@
 
 - I'm just the author of this github automation tool.
 
-  > [Paypal](http://paypal.me/kakathic)
+  > [☕ Buy Me a Coffee](http://paypal.me/kakathic)
 
-**Instructions**
+**Good luck!**
 ---
-
-- Turn on website mode for computer
-
-- And follow the following
-
-  > [Watch the video](https://youtu.be/tCeE34jEurA)
-
-<img src="https://github.com/kakathic/YT-AT/releases/download/Tmp/hd1.jpg" height="auto" width="100%" /> <img src="https://github.com/kakathic/YT-AT/releases/download/Tmp/hd2.jpg" height="auto" width="100%" />
-<img src="https://github.com/kakathic/YT-AT/releases/download/Tmp/hd3.jpg" height="auto" width="100%" /> <img src="https://github.com/kakathic/YT-AT/releases/download/Tmp/hd4.jpg" height="auto" width="100%" />
-<img src="https://github.com/kakathic/YT-AT/releases/download/Tmp/hd5.jpg" height="auto" width="100%" /> <img src="https://github.com/kakathic/YT-AT/releases/download/Tmp/hd6.jpg" height="auto" width="100%" />
-<img src="https://github.com/kakathic/YT-AT/releases/download/Tmp/hd7.jpg" height="auto" width="100%" /> <img src="https://github.com/kakathic/YT-AT/releases/download/Tmp/hd8.jpg" height="auto" width="100%" />
-<img src="https://github.com/kakathic/YT-AT/releases/download/Tmp/hd9.jpg" height="auto" width="100%" /> <img src="https://github.com/kakathic/YT-AT/releases/download/Tmp/hd10.jpg" height="auto" width="100%" />
-<img src="https://github.com/kakathic/YT-AT/releases/download/Tmp/hd11.jpg" height="auto" width="100%" /> <img src="https://github.com/kakathic/YT-AT/releases/download/Tmp/hd12.jpg" height="auto" width="100%" />
-
-**Branch sync**
----
-
-- Press update branch to keep this tool up to date.
-
-<img src="https://github.com/kakathic/YT-AT/releases/download/Tmp/ud.jpg" height="auto" width="100%" />
-
-> Good luck!

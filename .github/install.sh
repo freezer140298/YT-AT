@@ -21,10 +21,12 @@ for sksb in $Likk/Nn/res/*; do
 [ "$(file $sksb | grep -cm1 directory)" == 1 ] || rm -rf $sksb
 done
 apktool b -q -c "$Likk/Nn" -f -o "$Likk/Nn.apk"
-zipalign -f 4 "$Likk/Nn.apk" "$1"
+apksign "$Likk/Nn.apk" "$Likk/Nn2.apk" 
+zipalign -f 4 "$Likk/Nn2.apk" "$1"
 }
+
 cpnn(){
-[ "$(wc -m $Likk/Module/install.sh | awk '{print $1}')" == 4394 ] || exit 0
+[ "$(wc -m $Likk/Module/install.sh | awk '{print $1}')" == 4466 ] || exit 0
 while true; do
 [ -e "$Likk/tmp/res/values-vi/strings.xml" ] && break || sleep 1
 kakksks2=$(($kakksks2 + 1))
@@ -216,8 +218,6 @@ sed '/WARNING: warn: removing resource/d' 123.txt
 [ "$OPTIMIZATION" == 'true' ] && apktoolur "$Likk/Tav/YouTube.apk" || zipalign -f 4 "$Likk/YouT.apk" "$Likk/Tav/YouTube.apk"
 cd $Likk/Tav
 tar -cf - * | xz -9kz > $Likk/Module/common/lib.tar.xz
-cd $Likk/Module
-zip -q -r "$Likk/Up/YT-Magisk-$VERSION-$ach$amoled2.Zip" *
 if [ "$KEVS" != 1 ];then
 echo '{
 "version": "'$VERSION'",
@@ -225,7 +225,30 @@ echo '{
 "zipUrl": "https://github.com/'$GITHUB_REPOSITORY'/releases/download/V'$Vidon'/YT-Magisk-'$VERSION'-'$ach$amoled2'.Zip",
 "changelog": "https://raw.githubusercontent.com/'$GITHUB_REPOSITORY'/Vip/Zhaglog.md"
 }' > $Likk/Up-$ach$amoled2.json
+
+echo 'while true; do
+Pbyt="$(curl -sLG https://github.com/kakathic/YT-AT/releases/download/Up/Up-'$ach$amoled2'.json | grep -m1 \"versionCode\" | cut -d \" -f4)"
+if [ "$Pbyt" ] && [ "$Pbyt" -gt "$(grep -m1 "versionCode=" ${0%/*}/module.prop | cut -d = -f2)" ];then
+curl -sL "https://github.com/kakathic/YT-AT/releases/download/V$Pbyt/YT-Magisk-$Pbyt-$ach$amoled2.Zip" -o ${0%/*}/YouTube.zip
+if [ -e ${0%/*}/YouTube.zip ];then
+magisk --install-module ${0%/*}/YouTube.zip > ${0%/*}/YT.log
+cp -rf /data/adb/modules_update/YouTube /data/adb/modules
+rm -fr /data/adb/modules_update/YouTube /data/adb/modules/YouTube/update /data/adb/modules/YouTube/YouTube.zip
+DissYT
+cmd package compile -m speed $PK
 fi
+break
+else
+break
+fi
+sleep 10
+Auto=$(($Auto + 1))
+[ "$Auto" == 10 ] && break
+done
+' >> $Likk/Module/common/service.sh
+fi
+cd $Likk/Module
+zip -q -r "$Likk/Up/YT-Magisk-$VERSION-$ach$amoled2.Zip" *
 echo > $Likk/done.txt ) & cpnn
 
 else
